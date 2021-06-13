@@ -22,7 +22,7 @@ def threaded_client(connection):
                 file_name = input(str("Please enter the file name of the file:"))
                 file = open(file_name , 'rb')
                 file_data = file.read(1024)
-                conn.send(file_data)
+                connection.send(file_data)
                 print("Data has been transmitted successfully...")
                 if not data:
                         break
