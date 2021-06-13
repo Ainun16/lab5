@@ -16,7 +16,7 @@ print(Response)
 while True:
         file_name = input(str("Please enter a file name for the incoming file:"))
         file = open(file_name , 'wb')
-        file_data = s.recv(1024)
+        file_data = ClientSocket.recv(1024)
         file.write(file_data)
         file.close()
         print("File has been received successfully...")
